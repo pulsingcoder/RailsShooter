@@ -6,29 +6,41 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("General")]
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 2f;
     [Tooltip("in ms^-1")] [SerializeField] float xSpeed =10f;
     [Tooltip("in ms^-1")] [SerializeField] float ySpeed = 8f;
-    [SerializeField] float controlPitchFactor = -25f;
+    
+    [Header("Screen-position Based")]
     [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float positionYawFactor = -3f;
+
+    [Header("Control-throw")]
+    [SerializeField] float controlPitchFactor = -25f;
     [SerializeField] float controlRollFactor = -5f;
-    float xThrow, yThrow;
+    
+    [Header("Joystick")]
     [SerializeField]
     Joystick playStick;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float xThrow, yThrow;
+    bool isControlEnabled = true;
+
 
     // Update is called once per frame
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if (isControlEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
+    }
+
+    void OnPlayerDeath()
+    {
+        isControlEnabled = false;
     }
 
     private void ProcessRotation()
@@ -55,4 +67,6 @@ public class PlayerController : MonoBehaviour
         float posY = Mathf.Clamp(rawNewYPos, -yRange, yRange);
         transform.localPosition = new Vector3(posX, posY, transform.localPosition.z);
     }
+
+    
 }
