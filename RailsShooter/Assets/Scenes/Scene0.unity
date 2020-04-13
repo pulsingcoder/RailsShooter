@@ -361,6 +361,96 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1226067207}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &503672374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503672375}
+  - component: {fileID: 503672377}
+  - component: {fileID: 503672376}
+  - component: {fileID: 503672378}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &503672375
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503672374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2018188848}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -215.3, y: 179.6}
+  m_SizeDelta: {x: 263.3, y: 51.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &503672376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503672374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b4b07d76cc77144409ebb52ceaa5b3fb, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 123456789
+--- !u!222 &503672377
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503672374}
+  m_CullTransparentMesh: 0
+--- !u!114 &503672378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503672374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d865e6aea0e0bd4b8ed0ed9d18c9d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &509511013
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,7 +920,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967294
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!154 &1143586270
 TerrainCollider:
@@ -1299,6 +1389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d76d5a5157ffa4781dde7d8a1a7794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scorePerHit: 12
   deathFX: {fileID: 2609439605768726282, guid: e6bb2f05c0b7ec749aaaea775033f8f6, type: 3}
   parent: {fileID: 922055202}
 --- !u!4 &1539648227 stripped
@@ -1456,6 +1547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d76d5a5157ffa4781dde7d8a1a7794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scorePerHit: 12
   deathFX: {fileID: 2609439605768726282, guid: e6bb2f05c0b7ec749aaaea775033f8f6, type: 3}
   parent: {fileID: 922055202}
 --- !u!1001 &1676473624
@@ -1545,6 +1637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d76d5a5157ffa4781dde7d8a1a7794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scorePerHit: 12
   deathFX: {fileID: 2609439605768726282, guid: e6bb2f05c0b7ec749aaaea775033f8f6, type: 3}
   parent: {fileID: 922055202}
 --- !u!4 &1706305391 stripped
@@ -1881,6 +1974,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 722315782}
+  - {fileID: 503672375}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1967,6 +2061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d76d5a5157ffa4781dde7d8a1a7794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scorePerHit: 12
   deathFX: {fileID: 2609439605768726282, guid: e6bb2f05c0b7ec749aaaea775033f8f6, type: 3}
   parent: {fileID: 922055202}
 --- !u!1001 &2099301306
