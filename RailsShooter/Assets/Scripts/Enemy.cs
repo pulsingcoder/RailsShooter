@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int scorePerHit = 12;
     [SerializeField] GameObject deathFX;
     [SerializeField] Transform parent;
+    [SerializeField] int hits = 10;
     ScoreBoard scoreBoard;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,15 @@ public class Enemy : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
         IncreaseScore();
+        hits--;
+        if (hits <= 0)
+        {
+            KillEnemy();
+        }
+    }
+
+    private void KillEnemy()
+    {
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
         Destroy(gameObject);
