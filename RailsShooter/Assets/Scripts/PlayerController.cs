@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
 
     float xThrow, yThrow;
     bool isControlEnabled = true;
+    [SerializeField] GameObject[] guns;
+
+    public object ActivateGuns { get; private set; }
 
 
     // Update is called once per frame
@@ -35,6 +38,7 @@ public class PlayerController : MonoBehaviour
         {
             ProcessTranslation();
             ProcessRotation();
+            ProcessFiring();
         }
     }
 
@@ -68,5 +72,36 @@ public class PlayerController : MonoBehaviour
         transform.localPosition = new Vector3(posX, posY, transform.localPosition.z);
     }
 
-    
+    void ProcessFiring()
+    {
+        if (Input.GetButton("Fire"))
+        {
+            ActivateFire();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+
+
+}
+
+    private void ActivateFire()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+           
+
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach(GameObject gun in guns)
+        {
+            gun.SetActive(false);
+         
+        }
+    }
 }
