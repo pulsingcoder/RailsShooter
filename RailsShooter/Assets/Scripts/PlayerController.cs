@@ -59,10 +59,10 @@ public class PlayerController : MonoBehaviour
 
     void ProcessTranslation()
     {
-        xThrow = playStick.Horizontal;
+       xThrow = playStick.Horizontal;
         yThrow = playStick.Vertical;
-      //  Throw = Input.GetAxis("Horizontal");
-      // yThrow = Input.GetAxis("Vertical");
+        //xThrow = Input.GetAxis("Horizontal");
+        //yThrow = Input.GetAxis("Vertical");
         float xOffset = xThrow * xSpeed * Time.deltaTime;
         float yOffset = yThrow * ySpeed * Time.deltaTime;
         float rawNewXPos = transform.localPosition.x + xOffset;
